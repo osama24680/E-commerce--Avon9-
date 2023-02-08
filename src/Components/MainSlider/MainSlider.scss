@@ -1,0 +1,247 @@
+.MainSlider {
+    .MainSliderContent {
+        .alice-carousel {
+            div {
+                .alice-carousel__wrapper {
+                    border-radius: 10px !important;
+                    height: 490px;
+                    width: 100%;
+                    margin: auto;
+                    .alice-carousel__stage {
+                        .alice-carousel__stage-item {
+                            div {
+                                position: relative;
+                                img {
+                                    border-radius: 10px !important;
+                                    width: 100%;
+                                }
+                                .content {
+                                    position: absolute;
+                                    left: 110px;
+                                    top: 50%;
+                                    right: auto;
+                                    bottom: auto;
+                                    transform: translateY(-50%);
+                                    max-width: 400px;
+                                    h2 {
+                                        color: var(--pink);
+                                        font-size: 2rem;
+                                        font-weight: 500;
+                                        letter-spacing: 2px;
+                                        margin-bottom: 10px;
+                                    }
+                                    h1 {
+                                        color: var(--light_black);
+                                        font-size: 2.6rem;
+                                        text-transform: uppercase;
+                                        line-height: 1;
+                                        margin-bottom: 10px;
+                                        font-weight: 700;
+                                    }
+                                    h3 {
+                                        font-size: 1.6rem;
+                                        color: var(--sonic_silver);
+                                        margin-bottom: 10px;
+                                        font-weight: 500;
+                                    }
+                                    button {
+                                        background-color: var(--pink);
+                                        font-size: 1rem;
+                                        font-weight: 600;
+                                        text-transform: uppercase;
+                                        padding: 8px 15px;
+                                        border-radius: 5px;
+                                        color: var(--white);
+                                        margin-top: 10px;
+                                        transition: 0.3s;
+                                        &:hover {
+                                            color: var(--white);
+                                            background-color: var(--light_black);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .alice-carousel__dots {
+                margin-top: 5px;
+                li {
+                    width: 12px;
+                    height: 10px;
+                }
+            }
+        }
+    }
+}
+
+// ***************************************************************************************************
+// *******************************************media queries*******************************************
+// ***************************************************************************************************
+@media (max-width: 1200px) {
+    .MainSlider {
+       
+        .MainSliderContent {
+            .alice-carousel {
+                div {
+                    .alice-carousel__wrapper {
+                        .alice-carousel__stage {
+                            .alice-carousel__stage-item {
+                                div {
+                                    .content {
+                                        
+                                        left: 70px;                                  
+                                        h2 {
+                                            font-size: 1.8rem;
+                                       
+                                        }
+                                        h1 {
+                                            font-size: 2.1rem;
+                                         
+                                        }
+                                        h3 {
+                                            font-size: 1.4rem;
+                                          
+                                        }
+                                        button {
+                                            font-size: 1rem;
+                                          
+                                            
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px){
+    .MainSlider {
+        margin-top: 30px;
+    }
+}
+@media (max-width: 992px) {
+    .MainSlider {
+        .MainSliderContent {
+            .alice-carousel {
+                div {
+                    .alice-carousel__wrapper {
+                        .alice-carousel__stage {
+                            .alice-carousel__stage-item {
+                                div {
+                                    .content {
+                                        
+                                        left: 60px;
+                                        h2 {
+                                            font-size: 1.6rem;
+                                            letter-spacing: 2px;
+                                           
+                                        }
+                                        h1 {
+                                            font-size: 1.9rem;
+                                            line-height: 1;
+                                          
+                                        }
+                                        h3 {
+                                            font-size: 1.2rem;
+                                         
+                                        }
+                                        button {
+                                            font-size: 1rem;
+                                           
+                                            
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .MainSlider {
+        .MainSliderContent {
+            .alice-carousel {
+                div {
+                    .alice-carousel__wrapper {
+                        .alice-carousel__stage {
+                            .alice-carousel__stage-item {
+                                div {
+                                    .content {
+                                        left: 50px;
+                                        top: 50%;
+                                        max-width: 300px;
+                                        h2 {
+                                            font-size: 1.4rem;
+                                        }
+                                        h1 {
+                                            font-size: 1.6rem;
+                                        }
+                                        h3 {
+                                            font-size: 1.1rem;
+                                        }
+                                        button {
+                                            font-size: .9rem;                                            
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .MainSlider {
+        .MainSliderContent {
+            .alice-carousel {
+                div {
+                    .alice-carousel__wrapper {
+                        .alice-carousel__stage {
+                            .alice-carousel__stage-item {
+                                div {
+                                    .content {
+                                        left: 10px;
+                                        top: 50%;
+                                        max-width: 200px;
+                                        h2 {
+                                            font-size: .9rem;
+                                            letter-spacing: 0px;
+                                            margin-bottom: 14px;
+                                        }
+                                        h1 {
+                                            font-size: .8rem;
+                                            line-height: 1;
+                                            margin-bottom: 0px;
+                                        }
+                                        h3 {
+                                           display: none;
+                                        }
+                                        button {
+                                            font-size: .5rem;  
+                                            padding: 4px 10px;
+                                            margin-top: 15px;                                          
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

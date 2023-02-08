@@ -1,0 +1,122 @@
+@import "../../index.scss";
+.offer {
+  padding: 6px 0;
+  border-bottom: 1.5px solid var(--light_gray);
+  .offerContent {
+    @include flex_between;
+    padding: 0;
+    .socialIcons {
+      width: 18%;
+      .extraDiv {
+        width: 70%;
+        @include flex_between;
+        div {
+          width: 30px;
+          height: 30px;
+          border-radius: 5px;
+          background-color: var(--light_gray);
+          @include flex_center;
+          cursor: pointer;
+          transition: 0.4s;
+          svg {
+            color: var(--gray);
+            font-size: 21px;
+          }
+          &:hover {
+            background-color: var(--pink);
+            svg {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+    .mainText {
+      width: 30%;
+      align-content: center;
+      color: var(--gray);
+      text-transform: uppercase;
+      font-size: 14.5px;
+      text-align: center;
+      align-content: center;
+      p {
+        margin: 0 !important;
+      }
+      span {
+        font-weight: 600;
+      }
+    }
+    .menuOptions {
+      width: 19%;
+      @include flex_between;
+      justify-content: space-around;
+
+      .dropdown {
+        button {
+          padding: 0.27rem 0.55rem !important;
+        }
+        .dropdown_toggle {
+          background-color: transparent !important;
+          color: var(--gray) !important;
+          border: 1px solid var(--gray);
+        }
+      }
+    }
+  }
+}
+
+// *******************************************media queries*******************************************
+
+@media (max-width: 1200px) {
+  .offer {
+    .offerContent {
+      .socialIcons {
+        width: 20%;
+      }
+      .offer {
+        width: 55%;
+      }
+      .menuOptions {
+        width: 23%;
+      }
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .offer {
+    .offerContent {
+      .socialIcons {
+        display: none;
+      }
+      .mainText {
+        width: 60%;
+        display: flex;
+        align-content: flex-start;
+      }
+      .menuOptions {
+        width: 32%;
+      }
+    }
+  }
+}
+@media (max-width: 992px) {
+  .offer {
+    .offerContent {
+      .menuOptions {
+        width: 34%;
+      }
+    }
+  }
+}
+@media (max-width: 567px) {
+  .offer {
+    .offerContent {
+      .mainText {
+        width: 100%;
+      }
+      .menuOptions {
+        display: none;
+      }
+    }
+  }
+}
