@@ -2,25 +2,7 @@ import React from 'react'
 import "./CategoryProducts.scss"
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
-import coat from "../../assets/coat.svg"
-import glasses from "../../assets/glasses.svg"
-import shorts from "../../assets/shorts.svg"
-import dress from "../../assets/dress.svg"
-import tee from "../../assets/tee.svg"
-import jacket from "../../assets/jacket.svg"
-import hat from "../../assets/hat.svg"
-import watch from "../../assets/watch.svg"
-
-const cats = [
-    { id: 1, title: "DRESS & FROCK", total: 53, img: dress },
-    { id: 2, title: "WINTER WEAR", total: 58, img: coat },
-    { id: 3, title: "GLASSES & LENS", total: 68, img: glasses },
-    { id: 4, title: "SHORTS & JEANS", total: 84, img: shorts },
-    { id: 5, title: "T-SHIRTS", total: 35, img: tee },
-    { id: 6, title: "JACKET", total: 16, img: jacket },
-    { id: 7, title: "Watch", total: 27, img: watch },
-    { id: 8, title: "HAT & CAPS", total: 39, img: hat },
-]
+import {cats} from "../../Data"
 
 const responsive = {
     1200: {
@@ -33,16 +15,12 @@ const responsive = {
         items:2
     },
     576:{
-        items:1
+        items:2
     },
-
-  
 };
 
 
-
 const CategoryProducts = () => {
-
     return (
         <div className="proj_container">
             <div className="CategoryProducts">
@@ -71,7 +49,6 @@ const CategoryProducts = () => {
                 </AliceCarousel>
             </div>
         </div>
-
 
     )
 }

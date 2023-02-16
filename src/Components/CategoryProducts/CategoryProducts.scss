@@ -52,3 +52,13 @@
         }
     }
 }
+
+
+@media(max-width:576px){
+    .alice-carousel{
+        .alice-carousel__dots{
+          display: none;
+         
+        }
+    }
+}

@@ -1,0 +1,117 @@
+@import "../../index.scss";
+.SideNav {
+    .allScreenFixedSide {
+        .fixedSide {
+            transition: 0.3s;
+            transition-property: left;
+            position: absolute;
+            width: 300px;
+            padding: 20px 20px;
+            top: 0;
+            left: -300px;
+            bottom: 0;
+            background-color: var(--white);
+            z-index: 0;
+            box-shadow: none;
+            .fixedSideContent {
+                .mainHeading {
+                    @include flex_between;
+                    border-bottom: 2px solid var(--light_gray);
+                    padding-bottom: 10px;
+                    svg {
+                        font-size: 22px;
+                        cursor: pointer;
+                        transition: 0.2s;
+                        &:hover {
+                            color: var(--pink);
+                        }
+                    }
+                    h3 {
+                        font-size: 22px;
+                        font-weight: bold;
+                        color: var(--pink);
+                    }
+                }
+                ul {
+                    padding: 0;
+                    display: flex;
+                    flex-direction: column;
+                    li {
+                        border-bottom: 2px solid var(--light_gray);
+                        padding: 15px 0;
+                        color: var(--light_black);
+                        font-size: 17px;
+                        font-weight: 500;
+                        cursor: pointer;
+                    }
+                    .accordion {
+                        --bs-accordion-btn-padding-y: 0 !important;
+                        --bs-accordion-btn-padding-x: 0 !important;
+                        --bs-accordion-color: var(--light_black) !important;
+                        --bs-accordion-active-color: var(--light_black) !important;
+                        --bs-accordion-btn-icon: url(https://www.svgrepo.com/show/491467/plus.svg) !important;
+                        --bs-accordion-btn-icon-transform: rotate(180deg) !important;
+                        --bs-accordion-btn-icon-transition: transform 0.4s ease-in-out !important;
+                        --bs-accordion-btn-active-icon: url(https://www.svgrepo.com/show/500931/minus.svg) !important;
+                        --bs-accordion-btn-icon-width: 1rem !important;
+                        li {
+                            .accordion_item {
+                                border: none;
+                                .accordion_header {
+                                    button {
+                                        background-color: transparent;
+                                        font-weight: 500 !important ;
+                                        &:focus {
+                                            border: none !important;
+                                            box-shadow: none !important;
+                                            background-color: transparent;
+                                        }
+                                    }
+                                }
+                                div {
+                                    div {
+                                        padding-bottom: 0;
+
+                                        ul {
+                                            li {
+                                                transition: 0.3s;
+                                                cursor: pointer;
+                                                font-weight: normal;
+                                                &:last-child {
+                                                    border: none;
+                                                    padding-bottom: 0;
+                                                }
+                                                &:first-child {
+                                                    padding-top: 0;
+                                                }
+                                                &:hover {
+                                                    color: var(--pink);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.open_fixedSide {
+    transition-property: left;
+    z-index: 3 !important;
+    box-shadow: 0px 5px 15px 1200px rgba(0, 0, 0, 0.35) !important;
+    left: 0 !important;
+}
+.open_allScreenFixedSide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: transparent;
+    z-index: 5;
+}

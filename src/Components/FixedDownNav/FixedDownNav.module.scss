@@ -1,0 +1,55 @@
+@import "../../index.scss";
+.allFixedDown {
+    display: none;
+    .fixedDown {
+        width: 500px;
+        padding: 20px 0;
+        background-color: var(--white);
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        @include flex_around;
+        div {
+            position: relative;
+            transition: 0.3s;
+            &:hover {
+                color: var(--pink);
+            }
+            svg {
+                font-size: 27px;
+                cursor: pointer;
+            }
+            span {
+                @include flex_center;
+                position: absolute;
+                top: -10px;
+                right: -10px;
+                background-color: var(--bittersweet);
+                width: 17px;
+                height: 17px;
+                border-radius: 50%;
+                color: #fff;
+                font-size: 12px;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .allFixedDown {
+        display: block;
+    }
+}
+@media (max-width: 500px) {
+    .allFixedDown {
+        .fixedDown {
+            width: 100%;
+        }
+    }
+}

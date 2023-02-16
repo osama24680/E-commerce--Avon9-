@@ -1,5 +1,5 @@
 import React from 'react'
-import "./MobileCategories.scss"
+import "./SideCategories.scss"
 import Accordion from 'react-bootstrap/Accordion';
 import { useSelector, useDispatch } from 'react-redux'
 import { closeSideNav } from "../../Store/generalSlice"
@@ -7,13 +7,13 @@ import { MdClose } from "react-icons/md"
 import { AiFillStar } from "react-icons/ai"
 import { categories,bestSeller } from "../../Data"
 
-const MobileCategories = () => {
+const SideCategories = () => {
 
     let generalRedux = useSelector(state => state.generalSlice)
     let dispatch = useDispatch()
 
     return (
-        <div className="MobileCategoriesClass">
+        <div className="SideCategories">
             <div className={` allScreenFixedSide ${generalRedux.openCategories && "open_allScreenFixedSide"}`}>
                 <div className={` fixedSide ${generalRedux.openCategories && "open_fixedSide"}`}>
                     <div className="fixedSideContent">
@@ -58,4 +58,4 @@ const MobileCategories = () => {
     )
 }
 
-export default MobileCategories
+export default SideCategories

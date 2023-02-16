@@ -1,6 +1,12 @@
-
+import coat from "./assets/coat.svg"
 import glasses from "./assets/glasses.svg"
+import shorts from "./assets/shorts.svg"
 import dress from "./assets/dress.svg"
+import tee from "./assets/tee.svg"
+import jacket from "./assets/jacket.svg"
+import hat from "./assets/hat.svg"
+import watch from "./assets/watch.svg"
+
 import shoes from "./assets/shoes.svg"
 import jewelry from "./assets/jewelry.svg"
 import perfume from "./assets/perfume.svg"
@@ -11,6 +17,17 @@ import bestSeller1 from "./assets/bestSeller1.jpg"
 import bestSeller2 from "./assets/bestSeller2.jpg"
 import bestSeller3 from "./assets/bestSeller3.jpg"
 import bestSeller4 from "./assets/bestSeller4.jpg"
+
+export const cats = [
+    { id: 1, title: "DRESS & FROCK", total: 53, img: dress },
+    { id: 2, title: "WINTER WEAR", total: 58, img: coat },
+    { id: 3, title: "GLASSES & LENS", total: 68, img: glasses },
+    { id: 4, title: "SHORTS & JEANS", total: 84, img: shorts },
+    { id: 5, title: "T-SHIRTS", total: 35, img: tee },
+    { id: 6, title: "JACKET", total: 16, img: jacket },
+    { id: 7, title: "Watch", total: 27, img: watch },
+    { id: 8, title: "HAT & CAPS", total: 39, img: hat },
+]
 
 export const sideNav = [
     {

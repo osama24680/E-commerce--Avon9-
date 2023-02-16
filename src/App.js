@@ -1,7 +1,8 @@
 import style from './App.module.scss';
 import Home from "./Pages/Home/Home.jsx"
-import MobileNav from "./Components/MobileNav/MobileNav"
-import MobileCategories from "./Components/MobileCategories/MobileCategories"
+import SideNav from "./Components/SideNav/SideNav"
+import SideCategories from "./Components/SideCategories/SideCategories"
+import FixedDownNav from "./Components/FixedDownNav/FixedDownNav"
 import { useDispatch } from 'react-redux';
 import { closeSideNav } from './Store/generalSlice';
 function App() {
@@ -16,8 +17,9 @@ function App() {
   return (
     <div className={style.App}>
       <Home />
-      <MobileNav />
-      <MobileCategories />
+      <SideNav />
+      <SideCategories />
+      <FixedDownNav />
     </div>
   );
 }

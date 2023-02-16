@@ -1,49 +1,17 @@
-import React, { useState } from 'react'
-import style from "./MobileNav.module.scss"
+import style from "./SideNav.module.scss"
 import { sideNav } from "../../Data"
 import { useSelector, useDispatch } from 'react-redux'
-import { closeSideNav, openSideNav,openSideCategories } from "../../Store/generalSlice"
-import { AiOutlineMenu } from "react-icons/ai"
-import { BsBag } from "react-icons/bs"
-import { AiOutlineHome } from "react-icons/ai"
-import { AiOutlineHeart } from "react-icons/ai"
-import { BsGrid } from "react-icons/bs"
+import { closeSideNav, } from "../../Store/generalSlice"
 import { MdClose } from "react-icons/md"
 import Accordion from 'react-bootstrap/Accordion';
 
-
-
-const MobileNav = () => {
+const SideNav = () => {
 
     let generalRedux = useSelector(state => state.generalSlice)
     let dispatch = useDispatch()
 
     return (
-        <div className={style.MobileNav}>
-            <div className={style.allFixedDown}>
-                <div className={style.fixedDown}>
-
-                    <div onClick={() => dispatch(openSideNav())}>
-                        <AiOutlineMenu />
-                    </div>
-                    <div>
-                        <BsBag />
-                        <span>2</span>
-                    </div>
-                    <div>
-                        <AiOutlineHome />
-                    </div>
-                    <div>
-                        <AiOutlineHeart />
-                        <span>4</span>
-                    </div>
-                    <div>
-                        <BsGrid onClick={() => dispatch(openSideCategories())}/>
-                    </div>
-                </div>
-            </div>
-
-            
+        <div className={style.SideNav}>
             <div className={` ${style.allScreenFixedSide} ${generalRedux.openNav && style.open_allScreenFixedSide}`}>
                 <div className={` ${style.fixedSide} ${generalRedux.openNav && style.open_fixedSide}`}>
                     <div className={style.fixedSideContent}>
@@ -79,4 +47,4 @@ const MobileNav = () => {
     )
 }
 
-export default MobileNav
+export default SideNav
