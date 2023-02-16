@@ -13,7 +13,7 @@ const MobileCategories = () => {
     let dispatch = useDispatch()
 
     return (
-        <div className="MobileCategories">
+        <div className="MobileCategoriesClass">
             <div className={` allScreenFixedSide ${generalRedux.openCategories && "open_allScreenFixedSide"}`}>
                 <div className={` fixedSide ${generalRedux.openCategories && "open_fixedSide"}`}>
                     <div className="fixedSideContent">

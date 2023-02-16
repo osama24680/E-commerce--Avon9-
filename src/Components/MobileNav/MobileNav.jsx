@@ -42,6 +42,8 @@ const MobileNav = () => {
                     </div>
                 </div>
             </div>
+
+            
             <div className={` ${style.allScreenFixedSide} ${generalRedux.openNav && style.open_allScreenFixedSide}`}>
                 <div className={` ${style.fixedSide} ${generalRedux.openNav && style.open_fixedSide}`}>
                     <div className={style.fixedSideContent}>

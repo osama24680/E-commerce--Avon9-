@@ -1,12 +1,12 @@
 @import "../../index.scss";
-.MobileCategories {
+.MobileCategoriesClass {
     .allScreenFixedSide {
         .fixedSide {
-            transition: 0.3s;
-            transition-property: left;
             position: absolute;
             width: 300px;
-            padding: 20px 20px;
+            padding: 20px ;
+            transition: 0.3s;
+            transition-property: left;
             top: 0;
             left: -300px;
             bottom: 0;
@@ -14,7 +14,7 @@
             z-index: 0;
             box-shadow: none;
             .fixedSideContent {
-                .mainHeading {
+                .MobileCategories__mainHeading {
                     @include flex_between;
                     border-bottom: 2px solid var(--light_gray);
                     padding-bottom: 10px;
@@ -27,39 +27,61 @@
                         }
                     }
                     h3 {
-                        font-size: 22px;
-                        font-weight: bold;
-                        color: var(--pink);
+                       
+                        font-size: 1.2rem;
+                        text-transform: uppercase;
+                        letter-spacing: 0.8px;
+                        font-weight: 700;
+                        color: var(--onyx) !important;
                     }
                 }
                 ul {
                     padding: 0;
                     display: flex;
                     flex-direction: column;
-                    li {
-                        border-bottom: 2px solid var(--light_gray);
-                        padding: 15px 0;
-                        color: var(--light_black);
-                        font-size: 17px;
-                        font-weight: 500;
-                    }
+                 li{
+                    padding-top: 20px ; 
+                 }
                     .accordion {
                         --bs-accordion-btn-padding-y: 0 !important;
                         --bs-accordion-btn-padding-x: 0 !important;
-                        --bs-accordion-color: var(--light_black) !important;
+                        --bs-accordion-color: var(--sonic_silver) !important;
                         --bs-accordion-active-color: var(--light_black) !important;
-                        --bs-accordion-btn-icon: url(https://www.svgrepo.com/show/491467/plus.svg) !important;
+                        --bs-accordion-btn-icon: url("../../assets/plus.svg") !important;
                         --bs-accordion-btn-icon-transform: rotate(180deg) !important;
                         --bs-accordion-btn-icon-transition: transform 0.4s ease-in-out !important;
-                        --bs-accordion-btn-active-icon: url(https://www.svgrepo.com/show/500931/minus.svg) !important;
+                        --bs-accordion-btn-active-icon: url("../../assets/minus.svg") !important;
                         --bs-accordion-btn-icon-width: 1rem !important;
                         li {
+                            font-size: 1rem;
+                            color: var(--sonic_silver);
+                            font-weight: 600;
                             .accordion_item {
                                 border: none;
                                 .accordion_header {
                                     button {
+                                        color: var(--sonic_silver);
+                                        font-size: 1rem;
                                         background-color: transparent;
                                         font-weight: 500 !important ;
+                                        margin-top: 0px;
+                                        @include flex_between;
+                                        width: 100%;
+        
+                                        .accordion_header__img {
+                                            width: 9%;
+                                            img {
+                                                width: 100%;
+                                            }
+                                        }
+                                        p {
+                                            margin-bottom: 0;
+                                            margin-left: 10px;
+                                        }
+                                        ::after {
+                                            color: red;
+                                            font-size: 5rem;
+                                        }
                                         &:focus {
                                             border: none !important;
                                             box-shadow: none !important;
@@ -68,23 +90,36 @@
                                     }
                                 }
                                 div {
-                                    div {
-                                        padding-bottom: 0;
-
+                                    .accordion-body {
+                                        padding: 0 !important;
+                                        margin-top: 15px;
+        
                                         ul {
+                                            padding: 0 !important;
+        
                                             li {
                                                 transition: 0.3s;
                                                 cursor: pointer;
                                                 font-weight: normal;
-                                                &:last-child {
-                                                    border: none;
-                                                    padding-bottom: 0;
-                                                }
-                                                &:first-child {
-                                                    padding-top: 0;
+                                                font-size: 16px;
+                                                margin-top: 2px;
+                                                @include flex_between;
+                                                border:none;
+                                                padding: 5px 0 0 0;
+                                               
+                                                p {
+                                                    margin-bottom: 0;
                                                 }
                                                 &:hover {
-                                                    color: var(--pink);
+                                                    color: var(--light_black);
+                                                }
+                                                &:last-child {
+                                                    border-bottom: var(--border_bottom);
+                                                    padding-bottom: 15px;
+                                                    margin-top: 7px;
+                                                }
+                                                &:first-child {
+                                                    margin-top: 0px;
                                                 }
                                             }
                                         }
@@ -97,137 +132,7 @@
             }
         }
     }
-    .fixedSide {
-        position: absolute;
-        width: 300px;
-        padding: 20px 20px;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        background-color: var(--white);
-        z-index: 3;
-        .fixedSideContent {
-            .MobileCategories__mainHeading {
-                @include flex_between;
-                border-bottom: 2px solid var(--light_gray);
-                padding-bottom: 10px;
-                svg {
-                    font-size: 22px;
-                    cursor: pointer;
-                    transition: 0.2s;
-                    &:hover {
-                        color: var(--pink);
-                    }
-                }
-                h3 {
-                   
-                    font-size: 1.2rem;
-                    text-transform: uppercase;
-                    letter-spacing: 0.8px;
-                    font-weight: 700;
-                    color: var(--onyx) !important;
-                }
-            }
-            ul {
-                padding: 0;
-                display: flex;
-                flex-direction: column;
-             li{
-                padding-top: 2px ; 
-             }
-                .accordion {
-                    --bs-accordion-btn-padding-y: 0 !important;
-                    --bs-accordion-btn-padding-x: 0 !important;
-                    --bs-accordion-color: var(--sonic_silver) !important;
-                    --bs-accordion-active-color: var(--light_black) !important;
-                    --bs-accordion-btn-icon: url("../../assets/plus.svg") !important;
-                    --bs-accordion-btn-icon-transform: rotate(180deg) !important;
-                    --bs-accordion-btn-icon-transition: transform 0.4s ease-in-out !important;
-                    --bs-accordion-btn-active-icon: url("../../assets/minus.svg") !important;
-                    --bs-accordion-btn-icon-width: 1rem !important;
-                    li {
-                        font-size: 1rem;
-                        color: var(--sonic_silver);
-                        font-weight: 600;
-                        .accordion_item {
-                            border: none;
-                            .accordion_header {
-                                button {
-                                    color: var(--sonic_silver);
-                                    font-size: 1rem;
-                                    background-color: transparent;
-                                    font-weight: 500 !important ;
-                                    margin-top: 0px;
-                                    @include flex_between;
-                                    width: 100%;
-    
-                                    .accordion_header__img {
-                                        width: 9%;
-                                        img {
-                                            width: 100%;
-                                        }
-                                    }
-                                    p {
-                                        margin-bottom: 0;
-                                        margin-left: 10px;
-                                    }
-                                    ::after {
-                                        color: red;
-                                        font-size: 5rem;
-                                    }
-                                    &:focus {
-                                        border: none !important;
-                                        box-shadow: none !important;
-                                        background-color: transparent;
-                                    }
-                                }
-                            }
-                            div {
-                                .accordion-body {
-                                    padding: 0 !important;
-                                    margin-top: 15px;
-    
-                                    ul {
-                                        padding: 0 !important;
-    
-                                        li {
-                                            transition: 0.3s;
-                                            cursor: pointer;
-                                            font-weight: normal;
-                                            font-size: 16px;
-                                            margin-top: 2px;
-                                            @include flex_between;
-                                            border:none;
-                                            padding: 5px 0 0 0;
-                                           
-                                            p {
-                                                margin-bottom: 0;
-                                            }
-                                            &:hover {
-                                                color: var(--light_black);
-                                            }
-                                            &:last-child {
-                                                border-bottom: var(--border_bottom);
-                                                padding: 0;
-                                                margin-top: 7px;
-                                            }
-                                            &:first-child {
-                                                margin-top: 0px;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
 
-
-
-   
 }
 
 
