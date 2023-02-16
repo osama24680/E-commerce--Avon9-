@@ -1,47 +1,5 @@
 @import "../../index.scss";
-.MobileNav {
-    .allFixedDown {
-        display: none;
-        .fixedDown {
-            width: 500px;
-            padding: 20px 0;
-            background-color: var(--white);
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-            border-top-right-radius: 10px;
-            border-top-left-radius: 10px;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
-            @include flex_around;
-            div {
-                position: relative;
-                transition: 0.3s;
-                &:hover {
-                    color: var(--pink);
-                }
-                svg {
-                    font-size: 27px;
-                    cursor: pointer;
-                }
-                span {
-                    @include flex_center;
-                    position: absolute;
-                    top: -10px;
-                    right: -10px;
-                    background-color: var(--bittersweet);
-                    width: 17px;
-                    height: 17px;
-                    border-radius: 50%;
-                    color: #fff;
-                    font-size: 12px;
-                    font-weight: 400;
-                }
-            }
-        }
-    }
-
+.MobileCategories {
     .allScreenFixedSide {
         .fixedSide {
             transition: 0.3s;
@@ -148,9 +106,8 @@
         bottom: 0;
         background-color: var(--white);
         z-index: 3;
-        // box-shadow: 0px 5px 15px 1200px rgba(0, 0, 0, 0.35);
         .fixedSideContent {
-            .mainHeading {
+            .MobileCategories__mainHeading {
                 @include flex_between;
                 border-bottom: 2px solid var(--light_gray);
                 padding-bottom: 10px;
@@ -163,39 +120,61 @@
                     }
                 }
                 h3 {
-                    font-size: 22px;
-                    font-weight: bold;
-                    color: var(--pink);
+                   
+                    font-size: 1.2rem;
+                    text-transform: uppercase;
+                    letter-spacing: 0.8px;
+                    font-weight: 700;
+                    color: var(--onyx) !important;
                 }
             }
             ul {
                 padding: 0;
                 display: flex;
                 flex-direction: column;
-                li {
-                    border-bottom: 2px solid var(--light_gray);
-                    padding: 15px 0;
-                    color: var(--light_black);
-                    font-size: 17px;
-                    font-weight: 500;
-                }
+             li{
+                padding-top: 2px ; 
+             }
                 .accordion {
                     --bs-accordion-btn-padding-y: 0 !important;
                     --bs-accordion-btn-padding-x: 0 !important;
-                    --bs-accordion-color: var(--light_black) !important;
+                    --bs-accordion-color: var(--sonic_silver) !important;
                     --bs-accordion-active-color: var(--light_black) !important;
-                    --bs-accordion-btn-icon: url(https://www.svgrepo.com/show/491467/plus.svg) !important;
+                    --bs-accordion-btn-icon: url("../../assets/plus.svg") !important;
                     --bs-accordion-btn-icon-transform: rotate(180deg) !important;
                     --bs-accordion-btn-icon-transition: transform 0.4s ease-in-out !important;
-                    --bs-accordion-btn-active-icon: url(https://www.svgrepo.com/show/500931/minus.svg) !important;
+                    --bs-accordion-btn-active-icon: url("../../assets/minus.svg") !important;
                     --bs-accordion-btn-icon-width: 1rem !important;
                     li {
+                        font-size: 1rem;
+                        color: var(--sonic_silver);
+                        font-weight: 600;
                         .accordion_item {
                             border: none;
                             .accordion_header {
                                 button {
+                                    color: var(--sonic_silver);
+                                    font-size: 1rem;
                                     background-color: transparent;
                                     font-weight: 500 !important ;
+                                    margin-top: 0px;
+                                    @include flex_between;
+                                    width: 100%;
+    
+                                    .accordion_header__img {
+                                        width: 9%;
+                                        img {
+                                            width: 100%;
+                                        }
+                                    }
+                                    p {
+                                        margin-bottom: 0;
+                                        margin-left: 10px;
+                                    }
+                                    ::after {
+                                        color: red;
+                                        font-size: 5rem;
+                                    }
                                     &:focus {
                                         border: none !important;
                                         box-shadow: none !important;
@@ -204,23 +183,36 @@
                                 }
                             }
                             div {
-                                div {
-                                    padding-bottom: 0;
-
+                                .accordion-body {
+                                    padding: 0 !important;
+                                    margin-top: 15px;
+    
                                     ul {
+                                        padding: 0 !important;
+    
                                         li {
                                             transition: 0.3s;
                                             cursor: pointer;
                                             font-weight: normal;
-                                            &:last-child {
-                                                border: none;
-                                                padding-bottom: 0;
-                                            }
-                                            &:first-child {
-                                                padding-top: 0;
+                                            font-size: 16px;
+                                            margin-top: 2px;
+                                            @include flex_between;
+                                            border:none;
+                                            padding: 5px 0 0 0;
+                                           
+                                            p {
+                                                margin-bottom: 0;
                                             }
                                             &:hover {
-                                                color: var(--pink);
+                                                color: var(--light_black);
+                                            }
+                                            &:last-child {
+                                                border-bottom: var(--border_bottom);
+                                                padding: 0;
+                                                margin-top: 7px;
+                                            }
+                                            &:first-child {
+                                                margin-top: 0px;
                                             }
                                         }
                                     }
@@ -232,7 +224,29 @@
             }
         }
     }
+
+
+
+   
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .open_fixedSide {
     transition-property: left;
@@ -262,7 +276,6 @@
 @media (max-width: 500px) {
     .MobileNav {
         .allFixedDown {
-          
             .fixedDown {
                 width: 100%;
             }

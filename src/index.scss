@@ -7,10 +7,11 @@
   --pink: #ff8f9c;
   --gray: #787878;
   --light_gray: #f2f2f2;
+  --heavy_gray: #545454;
   --bittersweet: #f66;
   --onyx: #454545;
   --sonic_silver: #787878;
-  --bs-accordion-btn-padding-y: 0 !important;
+  --border_bottom:1.5px solid var(--light_gray);
 }
 @mixin flex_between {
   display: flex;
@@ -26,6 +27,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@mixin flex_column {
+  display: flex;
+ flex-direction: column;
 }
 
 * {

@@ -2,7 +2,7 @@
 .Header {
     padding: 20px 0;
     width: 100% !important;
-    border-bottom: 1.5px solid var(--light_gray);
+    border-bottom: var(--border_bottom);
     .HeaderContent {
         @include flex_between;
         .logo {

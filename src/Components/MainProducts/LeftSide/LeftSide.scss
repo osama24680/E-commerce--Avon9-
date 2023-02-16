@@ -1,0 +1,170 @@
+@import "../../../index.scss";
+.LeftSide {
+    width: 25%;
+    @include flex_column;
+    .LeftSide__category {
+        padding: 20px;
+        border: var(--border_bottom);
+        border-radius: 8px;
+        h2 {
+            color: var(--onyx);
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            font-weight: 700;
+        }
+        ul {
+            padding: 0;
+            margin-top: 10px;
+            .accordion {
+                --bs-accordion-btn-padding-y: 0 !important;
+                --bs-accordion-btn-padding-x: 0 !important;
+                --bs-accordion-color: var(--sonic_silver) !important;
+                --bs-accordion-active-color: var(--light_black) !important;
+                --bs-accordion-btn-icon: url("../../../assets/plus.svg") !important;
+                --bs-accordion-btn-icon-transform: rotate(180deg) !important;
+                --bs-accordion-btn-icon-transition: transform 0.4s ease-in-out !important;
+                --bs-accordion-btn-active-icon: url("../../../assets/minus.svg") !important;
+                --bs-accordion-btn-icon-width: 1rem !important;
+                li {
+                    font-size: 1rem;
+                    color: var(--sonic_silver);
+                    font-weight: 600;
+                    .accordion_item {
+                        border: none;
+                        .accordion_header {
+                            button {
+                                color: var(--sonic_silver);
+                                font-size: 1.1rem;
+                                background-color: transparent;
+                                font-weight: 500 !important ;
+                                margin-top: 15px;
+                                @include flex_between;
+                                width: 100%;
+
+                                .accordion_header__img {
+                                    width: 9%;
+                                    img {
+                                        width: 100%;
+                                    }
+                                }
+                                p {
+                                    margin-bottom: 0;
+                                    margin-left: 10px;
+                                }
+                                ::after {
+                                    color: red;
+                                    font-size: 5rem;
+                                }
+                                &:focus {
+                                    border: none !important;
+                                    box-shadow: none !important;
+                                    background-color: transparent;
+                                }
+                            }
+                        }
+                        div {
+                            .accordion-body {
+                                padding: 0 !important;
+                                margin-top: 15px;
+
+                                ul {
+                                    padding: 0 !important;
+
+                                    li {
+                                        transition: 0.3s;
+                                        cursor: pointer;
+                                        font-weight: normal;
+                                        font-size: 16px;
+                                        margin-top: 6px;
+                                        @include flex_between;
+                                        p {
+                                            margin-bottom: 0;
+                                        }
+                                        &:hover {
+                                            color: var(--light_black);
+                                        }
+                                        &:last-child {
+                                            border-bottom: var(--border_bottom);
+                                            padding-bottom: 15px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .LeftSide__bestSeller {
+        margin-top: 30px;
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--onyx);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 15px;
+        }
+        .LeftSide__bestSeller__items {
+            @include flex_column;
+            .item {
+                margin-top: 10px;
+                @include flex_between;
+                justify-content: flex-start;
+                .image {
+                    width: 25%;
+                    background-color: #f7f7f7;
+                    padding: 0px;
+                    img {
+                        width: 100%;
+                        border-radius: 7px;
+                    }
+                }
+                .content {
+                    margin-left: 20px;
+                    p {
+                        margin-bottom: 0;
+                        cursor: pointer;
+                        color: var(--onyx);
+                        font-size: 1rem;
+                        font-weight: 500;
+                        text-transform: capitalize;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        -o-text-overflow: ellipsis;
+                        text-overflow: ellipsis;
+                        letter-spacing: 0.5px;
+                    }
+                    .stars {
+                        color: #f6a355;
+                    }
+                    .price {
+                        @include flex_around;
+                        justify-content: flex-start;
+                        p {
+                            &:first-child {
+                                text-decoration: line-through;
+                                color: var(--sonic_silver);
+                                font-size: 14px;
+                            }
+                            &:last-child {
+                                margin-left: 20px;
+                                font-weight: 600;
+                                font-size: 17px;
+                                color: var(--heavy_gray);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:1024px){
+    .LeftSide{
+        display: none;
+    }
+}

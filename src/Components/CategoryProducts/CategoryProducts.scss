@@ -1,0 +1,54 @@
+@import "../../index.scss";
+.CategoryProducts {
+    // margin-top: 20px;
+    .alice-carousel{
+        .alice-carousel__dots{
+            margin-top: 5px;
+         
+        }
+    }
+    .item {
+        position: relative;
+        @include flex_between;
+        justify-content: flex-start;
+        border: var(--border_bottom);
+        border-radius: 8px;
+        width: 95%;
+        margin: auto;
+        padding: 15px;
+        .item_img {
+            border-radius: 8px;
+            width: 18%;
+            border: 1px solid #ccc878;
+            background-color: #ededed;
+            @include flex_center;
+            padding: 10px;
+            img {
+                width: 100%;
+            }
+        }
+        .item_content {
+            margin-left: 13px;
+            h3 {
+                color: var(--light_black);
+                font-size: 0.9rem;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+            a {
+                color: pink;
+                font-size: 0.9rem;
+                font-weight: 500;
+                text-transform: capitalize;
+                text-decoration: none;
+            }
+        }
+        span {
+            position: absolute;
+            top: 15px;
+            right: 10px;
+            color: var(--sonic_silver);
+            font-size: .76rem;
+        }
+    }
+}

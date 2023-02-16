@@ -1,7 +1,7 @@
 @import "../../index.scss";
 .offer {
   padding: 6px 0;
-  border-bottom: 1.5px solid var(--light_gray);
+  border-bottom: var(--border_bottom);
   .offerContent {
     @include flex_between;
     padding: 0;

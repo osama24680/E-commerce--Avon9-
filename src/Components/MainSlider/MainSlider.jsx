@@ -11,12 +11,7 @@ let banners = [
     { img: MainBanner2, title: "Trending Accessories", topic: "MODERN SUNGLASSES", price: "15.00" },
     { img: MainBanner3, title: "Sale Offer", topic: "WOMEN'S NEW FASHION SUMMER SALE", price: "29.99" },
 ]
-const items = banners.map((item, index) => (
-    <div className="carouselItems" key={index}>
-        <img src={item.img} alt="..." />
-    </div>
 
-))
 
 
 
@@ -31,6 +26,7 @@ const MainSlider = () => {
                     autoPlayInterval="3000"
                     disableButtonsControls
                     keyboardNavigation
+                    // responsive={responsive}
 
                 >
                     {banners.map((item, index) => (

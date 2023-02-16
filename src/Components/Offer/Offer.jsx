@@ -27,10 +27,10 @@ const Offer = () => {
                     </div>
 
                 </div>
-                <div class={style.mainText}>
+                <div className={style.mainText}>
                     <p><span>FREE SHIPPING </span>THIS WEEK ORDER OVER - $55</p>
                 </div>
-                <div class={style.menuOptions}>
+                <div className={style.menuOptions}>
                     <Dropdown className={style.dropdown}>
                         <Dropdown.Toggle variant="success" id="dropdown-basic" className={style.dropdown_toggle}>
                             Currency
